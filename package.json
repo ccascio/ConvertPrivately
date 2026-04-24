@@ -1,0 +1,20 @@
+{
+  "name": "convertprivately-oss",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Client-side file converters that never upload your files. Extracted from convertprivately.com.",
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccascio/ConvertPrivately.git"
+  },
+  "homepage": "https://convertprivately.com",
+  "license": "MIT"
+}

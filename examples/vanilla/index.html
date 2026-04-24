@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- noindex: prevents this example from competing with convertprivately.com in search -->
+    <meta name="robots" content="noindex, nofollow" />
+    <title>ConvertPrivately — Vanilla Example</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 640px; margin: 2rem auto; padding: 0 1rem; }
+      section { margin: 2rem 0; padding: 1rem; border: 1px solid #e5e7eb; border-radius: 8px; }
+      h1, h2 { margin-top: 0; }
+      input[type="file"], textarea { width: 100%; margin: 0.5rem 0; }
+      textarea { font-family: monospace; min-height: 6rem; }
+      .result img { max-width: 100%; border: 1px solid #e5e7eb; }
+      .attribution { font-size: 0.75rem; color: #047857; margin-top: 0.5rem; }
+      .attribution a { color: inherit; }
+    </style>
+  </head>
+  <body>
+    <h1>ConvertPrivately — Vanilla Example</h1>
+    <p>Three converters from <code>@convertprivately/core</code>, loaded via <a href="https://esm.sh">esm.sh</a>. Nothing is uploaded — open DevTools → Network to verify.</p>
+    <p class="attribution">Powered by <a href="https://convertprivately.com" target="_blank" rel="noopener">ConvertPrivately</a> — <a href="https://convertprivately.com/how-it-works" target="_blank" rel="noopener">How it works</a></p>
+
+    <section>
+      <h2>HEIC → JPEG</h2>
+      <input type="file" id="heic-input" accept=".heic,.heif,image/heic,image/heif" />
+      <p id="heic-status"></p>
+      <div class="result"><img id="heic-output" hidden alt="Converted" /></div>
+    </section>
+
+    <section>
+      <h2>Base64 encode/decode</h2>
+      <textarea id="b64-input" placeholder="Type text here"></textarea>
+      <button id="b64-encode">Encode</button>
+      <button id="b64-decode">Decode</button>
+      <textarea id="b64-output" readonly></textarea>
+    </section>
+
+    <section>
+      <h2>QR code</h2>
+      <input id="qr-input" type="text" value="https://convertprivately.com" style="width: 100%" />
+      <canvas id="qr-canvas"></canvas>
+    </section>
+
+    <script type="module">
+      import { heicToImage } from "https://esm.sh/@convertprivately/core/image/heic";
+      import { encodeBase64, decodeBase64 } from "https://esm.sh/@convertprivately/core/text/base64";
+      import { generateQrOnCanvas } from "https://esm.sh/@convertprivately/core/qr";
+
+      // HEIC
+      const heicInput = document.getElementById("heic-input");
+      const heicStatus = document.getElementById("heic-status");
+      const heicOutput = document.getElementById("heic-output");
+      heicInput.addEventListener("change", async () => {
+        const file = heicInput.files?.[0];
+        if (!file) return;
+        heicStatus.textContent = "Converting...";
+        try {
+          const blob = await heicToImage(file, { format: "jpeg", quality: 0.9 });
+          heicOutput.src = URL.createObjectURL(blob);
+          heicOutput.hidden = false;
+          heicStatus.textContent = "Done.";
+        } catch (err) {
+          heicStatus.textContent = "Error: " + err.message;
+        }
+      });
+
+      // Base64
+      const b64Input = document.getElementById("b64-input");
+      const b64Output = document.getElementById("b64-output");
+      document.getElementById("b64-encode").addEventListener("click", () => {
+        b64Output.value = encodeBase64(b64Input.value);
+      });
+      document.getElementById("b64-decode").addEventListener("click", () => {
+        try {
+          b64Output.value = decodeBase64(b64Input.value);
+        } catch (err) {
+          b64Output.value = "Error: " + err.message;
+        }
+      });
+
+      // QR
+      const qrInput = document.getElementById("qr-input");
+      const qrCanvas = document.getElementById("qr-canvas");
+      async function renderQr() {
+        if (!qrInput.value) return;
+        await generateQrOnCanvas(qrCanvas, qrInput.value, { size: 256 });
+      }
+      qrInput.addEventListener("input", renderQr);
+      renderQr();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+{
+  "name": "@convertprivately/react",
+  "version": "0.1.0",
+  "description": "Drop-in React components for client-side file conversion. Nothing is uploaded.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "react",
+    "converter",
+    "client-side",
+    "privacy",
+    "heic",
+    "avif",
+    "pdf",
+    "image-compression"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccascio/ConvertPrivately.git",
+    "directory": "packages/react"
+  },
+  "homepage": "https://convertprivately.com",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "@convertprivately/core": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^5.4.0"
+  }
+}

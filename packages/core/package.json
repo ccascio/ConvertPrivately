@@ -1,0 +1,108 @@
+{
+  "name": "@convertprivately/core",
+  "version": "0.1.0",
+  "description": "Client-side file converters — framework-agnostic TypeScript functions. Nothing is uploaded.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./image/heic": {
+      "types": "./dist/image/heic.d.ts",
+      "import": "./dist/image/heic.js"
+    },
+    "./image/avif": {
+      "types": "./dist/image/avif.d.ts",
+      "import": "./dist/image/avif.js"
+    },
+    "./image/compress": {
+      "types": "./dist/image/compress.d.ts",
+      "import": "./dist/image/compress.js"
+    },
+    "./image/background-remove": {
+      "types": "./dist/image/backgroundRemove.d.ts",
+      "import": "./dist/image/backgroundRemove.js"
+    },
+    "./pdf/compress": {
+      "types": "./dist/pdf/compress.d.ts",
+      "import": "./dist/pdf/compress.js"
+    },
+    "./text/base64": {
+      "types": "./dist/text/base64.d.ts",
+      "import": "./dist/text/base64.js"
+    },
+    "./text/csv-json": {
+      "types": "./dist/text/csvJson.d.ts",
+      "import": "./dist/text/csvJson.js"
+    },
+    "./units": {
+      "types": "./dist/units/index.d.ts",
+      "import": "./dist/units/index.js"
+    },
+    "./ocr": {
+      "types": "./dist/ocr/index.d.ts",
+      "import": "./dist/ocr/index.js"
+    },
+    "./qr": {
+      "types": "./dist/qr/index.d.ts",
+      "import": "./dist/qr/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "converter",
+    "client-side",
+    "privacy",
+    "heic",
+    "avif",
+    "pdf",
+    "ocr",
+    "image-compression",
+    "browser"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ccascio/ConvertPrivately.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://convertprivately.com",
+  "license": "MIT",
+  "peerDependencies": {
+    "heic2any": ">=0.0.4",
+    "browser-image-compression": ">=2.0.0",
+    "pdf-lib": ">=1.17.0",
+    "pdfjs-dist": ">=4.0.0",
+    "tesseract.js": ">=5.0.0",
+    "qrcode": ">=1.5.0",
+    "papaparse": ">=5.4.0",
+    "@imgly/background-removal": ">=1.4.0"
+  },
+  "peerDependenciesMeta": {
+    "heic2any": { "optional": true },
+    "browser-image-compression": { "optional": true },
+    "pdf-lib": { "optional": true },
+    "pdfjs-dist": { "optional": true },
+    "tesseract.js": { "optional": true },
+    "qrcode": { "optional": true },
+    "papaparse": { "optional": true },
+    "@imgly/background-removal": { "optional": true }
+  },
+  "devDependencies": {
+    "@types/papaparse": "^5.3.0",
+    "@types/qrcode": "^1.5.0",
+    "pdfjs-dist": "^4.0.0",
+    "typescript": "^5.4.0"
+  }
+}
