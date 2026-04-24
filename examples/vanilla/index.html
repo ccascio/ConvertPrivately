@@ -43,10 +43,24 @@
       <canvas id="qr-canvas"></canvas>
     </section>
 
+    <!--
+      Loads @convertprivately/core from the local monorepo build (../../packages/core/dist).
+      After the package is published to npm, you can switch to esm.sh:
+        import { heicToImage } from "https://esm.sh/@convertprivately/core/image/heic";
+      heic2any and qrcode are pulled from esm.sh because they are optional peer deps.
+    -->
+    <script type="importmap">
+      {
+        "imports": {
+          "heic2any": "https://esm.sh/heic2any@0.0.4",
+          "qrcode": "https://esm.sh/qrcode@1.5.4"
+        }
+      }
+    </script>
     <script type="module">
-      import { heicToImage } from "https://esm.sh/@convertprivately/core/image/heic";
-      import { encodeBase64, decodeBase64 } from "https://esm.sh/@convertprivately/core/text/base64";
-      import { generateQrOnCanvas } from "https://esm.sh/@convertprivately/core/qr";
+      import { heicToImage } from "../../packages/core/dist/image/heic.js";
+      import { encodeBase64, decodeBase64 } from "../../packages/core/dist/text/base64.js";
+      import { generateQrOnCanvas } from "../../packages/core/dist/qr/index.js";
 
       // HEIC
       const heicInput = document.getElementById("heic-input");

@@ -1,12 +1,21 @@
 # Vanilla HTML example
 
-Open `index.html` directly in a browser, or serve with any static server:
+Plain HTML using `<script type="module">` — no build step for the example itself, but the `@convertprivately/core` package must be built first.
+
+## Run it
+
+From the repo root:
 
 ```bash
+npm install
+npm run build --workspace @convertprivately/core
+cd examples/vanilla
 npx serve .
 ```
 
-No build step. ES modules are loaded from [esm.sh](https://esm.sh).
+Then open http://localhost:3000.
+
+The example imports from the locally-built `../../packages/core/dist/`. After we publish to npm you can swap those paths for `https://esm.sh/@convertprivately/core/...` and drop the relative imports.
 
 ## What it shows
 
@@ -18,4 +27,4 @@ Open DevTools → Network to verify no file data leaves the browser.
 
 ## SEO
 
-The example has `<meta name="robots" content="noindex, nofollow">` so it does not compete with [convertprivately.com](https://convertprivately.com) in search results. Remove it at your own risk if you fork this example.
+The example has `<meta name="robots" content="noindex, nofollow">` so it does not compete with [convertprivately.com](https://convertprivately.com) in search results. Remove at your own risk if you fork this example.
