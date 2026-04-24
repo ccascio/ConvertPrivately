@@ -16,9 +16,10 @@ Heavy conversion libraries (`heic2any`, `pdf-lib`, `tesseract.js`, `@imgly/backg
 npm install heic2any                    # HEIC decode
 npm install browser-image-compression    # image compress
 npm install pdf-lib                      # PDF operations
+npm install pdfjs-dist                   # OCR on PDFs
 npm install tesseract.js                 # OCR
 npm install qrcode                       # QR generation
-npm install @imgly/background-removal    # background removal (~20MB WASM on first run)
+npm install papaparse                    # CSV ↔ JSON
 ```
 
 ## API shape
@@ -41,7 +42,6 @@ Import each converter via a deep path to keep bundle size small:
 import { heicToImage } from "@convertprivately/core/image/heic";
 import { avifToImage } from "@convertprivately/core/image/avif";
 import { compressImage } from "@convertprivately/core/image/compress";
-import { removeBackground } from "@convertprivately/core/image/background-remove";
 import { compressPdf } from "@convertprivately/core/pdf/compress";
 import { encodeBase64, decodeBase64 } from "@convertprivately/core/text/base64";
 import { csvToJson, jsonToCsv } from "@convertprivately/core/text/csv-json";

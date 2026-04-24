@@ -8,8 +8,8 @@ App Router skeleton. Components must be rendered as client components because th
 npx create-next-app@latest my-app --ts --app --no-tailwind
 cd my-app
 npm install @convertprivately/core @convertprivately/react \
-  heic2any browser-image-compression pdf-lib \
-  tesseract.js qrcode papaparse @imgly/background-removal
+  heic2any browser-image-compression pdf-lib pdfjs-dist \
+  tesseract.js qrcode papaparse
 ```
 
 ## app/page.tsx

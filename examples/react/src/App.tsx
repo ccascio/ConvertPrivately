@@ -8,7 +8,6 @@ import {
   UnitConverter,
   OcrTool,
   QrCode,
-  BackgroundRemove,
 } from "@convertprivately/react";
 
 const wrapper: React.CSSProperties = {
@@ -69,10 +68,6 @@ export function App() {
       <section style={section}>
         <h2>QR code</h2>
         <QrCode />
-      </section>
-      <section style={section}>
-        <h2>Background remove</h2>
-        <BackgroundRemove />
       </section>
     </div>
   );

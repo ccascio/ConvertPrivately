@@ -27,6 +27,3 @@ export type { OcrToolProps } from "./OcrTool.js";
 
 export { QrCode } from "./QrCode.js";
 export type { QrCodeProps } from "./QrCode.js";
-
-export { BackgroundRemove } from "./BackgroundRemove.js";
-export type { BackgroundRemoveProps } from "./BackgroundRemove.js";

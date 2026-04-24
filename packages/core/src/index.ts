@@ -2,7 +2,6 @@ export * from "./types.js";
 export * from "./image/heic.js";
 export * from "./image/avif.js";
 export * from "./image/compress.js";
-export * from "./image/backgroundRemove.js";
 export * from "./pdf/compress.js";
 export * from "./text/base64.js";
 export * from "./text/csvJson.js";
