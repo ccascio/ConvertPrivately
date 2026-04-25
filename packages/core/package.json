@@ -46,6 +46,46 @@
     "./qr": {
       "types": "./dist/qr/index.d.ts",
       "import": "./dist/qr/index.js"
+    },
+    "./text/slugify": {
+      "types": "./dist/text/slugify.d.ts",
+      "import": "./dist/text/slugify.js"
+    },
+    "./text/case-converter": {
+      "types": "./dist/text/caseConverter.d.ts",
+      "import": "./dist/text/caseConverter.js"
+    },
+    "./text/url-encode": {
+      "types": "./dist/text/urlEncode.d.ts",
+      "import": "./dist/text/urlEncode.js"
+    },
+    "./text/html-entities": {
+      "types": "./dist/text/htmlEntities.d.ts",
+      "import": "./dist/text/htmlEntities.js"
+    },
+    "./text/jwt-decode": {
+      "types": "./dist/text/jwtDecode.d.ts",
+      "import": "./dist/text/jwtDecode.js"
+    },
+    "./text/timestamp": {
+      "types": "./dist/text/timestamp.d.ts",
+      "import": "./dist/text/timestamp.js"
+    },
+    "./data/json-formatter": {
+      "types": "./dist/data/jsonFormatter.d.ts",
+      "import": "./dist/data/jsonFormatter.js"
+    },
+    "./data/json-yaml": {
+      "types": "./dist/data/jsonYaml.d.ts",
+      "import": "./dist/data/jsonYaml.js"
+    },
+    "./data/json-xml": {
+      "types": "./dist/data/jsonXml.d.ts",
+      "import": "./dist/data/jsonXml.js"
+    },
+    "./units/color": {
+      "types": "./dist/units/color.d.ts",
+      "import": "./dist/units/color.js"
     }
   },
   "files": [
@@ -85,7 +125,9 @@
     "pdfjs-dist": ">=4.0.0",
     "tesseract.js": ">=5.0.0",
     "qrcode": ">=1.5.0",
-    "papaparse": ">=5.4.0"
+    "papaparse": ">=5.4.0",
+    "js-yaml": ">=4.1.0",
+    "fast-xml-parser": ">=4.0.0"
   },
   "peerDependenciesMeta": {
     "heic2any": { "optional": true },
@@ -94,11 +136,16 @@
     "pdfjs-dist": { "optional": true },
     "tesseract.js": { "optional": true },
     "qrcode": { "optional": true },
-    "papaparse": { "optional": true }
+    "papaparse": { "optional": true },
+    "js-yaml": { "optional": true },
+    "fast-xml-parser": { "optional": true }
   },
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@types/papaparse": "^5.3.0",
     "@types/qrcode": "^1.5.0",
+    "fast-xml-parser": "^4.0.0",
+    "js-yaml": "^4.1.0",
     "pdfjs-dist": "^4.0.0",
     "typescript": "^5.4.0"
   }

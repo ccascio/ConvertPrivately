@@ -19,7 +19,7 @@ Most "online converters" quietly upload your files to a server. We think that's 
 
 | Package | What it does |
 | --- | --- |
-| [`@convertprivately/core`](./packages/core) | Framework-agnostic TypeScript functions: HEIC→JPG, AVIF→PNG, image/PDF compress, OCR, Base64, CSV↔JSON, QR codes, unit conversion. |
+| [`@convertprivately/core`](./packages/core) | Framework-agnostic TypeScript functions: HEIC→JPG, AVIF→PNG, image/PDF compress, OCR, Base64, CSV↔JSON, QR codes, unit conversion, slugify, case conversion, URL encode, HTML entities, JWT decode, Unix timestamps, JSON formatter, JSON↔YAML, JSON↔XML, color (hex/rgb/hsl). |
 | [`@convertprivately/react`](./packages/react) | Drop-in React components with file input, preview, and download. Attribution badge on by default (link back to convertprivately.com); set `hideAttribution` to remove. |
 
 ## Examples
