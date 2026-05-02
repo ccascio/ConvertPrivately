@@ -1,4 +1,4 @@
-# ConvertPrivately — Open Source
+# ConvertPrivately
 
 **Client-side file converters that never upload your files.**
 
