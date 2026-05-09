@@ -23,6 +23,14 @@
       "types": "./dist/image/compress.d.ts",
       "import": "./dist/image/compress.js"
     },
+    "./image/resize": {
+      "types": "./dist/image/resize.d.ts",
+      "import": "./dist/image/resize.js"
+    },
+    "./image/rotate": {
+      "types": "./dist/image/rotate.d.ts",
+      "import": "./dist/image/rotate.js"
+    },
     "./pdf/compress": {
       "types": "./dist/pdf/compress.d.ts",
       "import": "./dist/pdf/compress.js"
@@ -34,6 +42,38 @@
     "./text/csv-json": {
       "types": "./dist/text/csvJson.d.ts",
       "import": "./dist/text/csvJson.js"
+    },
+    "./text/hash": {
+      "types": "./dist/text/hash.d.ts",
+      "import": "./dist/text/hash.js"
+    },
+    "./text/uuid": {
+      "types": "./dist/text/uuid.d.ts",
+      "import": "./dist/text/uuid.js"
+    },
+    "./text/password": {
+      "types": "./dist/text/password.d.ts",
+      "import": "./dist/text/password.js"
+    },
+    "./text/diff": {
+      "types": "./dist/text/diff.d.ts",
+      "import": "./dist/text/diff.js"
+    },
+    "./text/text-stats": {
+      "types": "./dist/text/textStats.d.ts",
+      "import": "./dist/text/textStats.js"
+    },
+    "./text/morse-code": {
+      "types": "./dist/text/morseCode.d.ts",
+      "import": "./dist/text/morseCode.js"
+    },
+    "./text/ascii-convert": {
+      "types": "./dist/text/asciiConvert.d.ts",
+      "import": "./dist/text/asciiConvert.js"
+    },
+    "./text/lorem-ipsum": {
+      "types": "./dist/text/loremIpsum.d.ts",
+      "import": "./dist/text/loremIpsum.js"
     },
     "./units": {
       "types": "./dist/units/index.d.ts",
@@ -127,7 +167,8 @@
     "qrcode": ">=1.5.0",
     "papaparse": ">=5.4.0",
     "js-yaml": ">=4.1.0",
-    "fast-xml-parser": ">=4.0.0"
+    "fast-xml-parser": ">=4.0.0",
+    "ulid": ">=3.0.0"
   },
   "peerDependenciesMeta": {
     "heic2any": { "optional": true },
@@ -138,7 +179,8 @@
     "qrcode": { "optional": true },
     "papaparse": { "optional": true },
     "js-yaml": { "optional": true },
-    "fast-xml-parser": { "optional": true }
+    "fast-xml-parser": { "optional": true },
+    "ulid": { "optional": true }
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
@@ -147,6 +189,7 @@
     "fast-xml-parser": "^4.0.0",
     "js-yaml": "^4.1.0",
     "pdfjs-dist": "^4.0.0",
+    "ulid": "^3.0.0",
     "typescript": "^5.4.0"
   }
 }
