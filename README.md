@@ -19,7 +19,7 @@ Most "online converters" quietly upload your files to a server. We think that's 
 
 | Package | What it does |
 | --- | --- |
-| [`@convertprivately/core`](./packages/core) | Framework-agnostic TypeScript functions: HEIC→JPG, AVIF→PNG, image compress/resize/rotate, PDF compress, OCR, Base64, CSV↔JSON, QR codes, hash (SHA-1/256/384/512), UUID/ULID, password generator, text diff, text stats, Morse code, ASCII/binary/hex, Lorem ipsum, unit conversion, color (hex/rgb/hsl), slugify, case conversion, URL encode, HTML entities, JWT decode, Unix timestamps, JSON formatter, JSON↔YAML, JSON↔XML. |
+| [`@convertprivately/core`](./packages/core) | Framework-agnostic TypeScript functions: HEIC→JPG, AVIF→PNG, image compress/resize/rotate, PDF compress, OCR, Base64, CSV↔JSON, JSON→CSV, QR codes, hash (SHA-1/256/384/512), UUID/ULID, password generator, passphrase (diceware), text diff, JSON diff, text stats, Morse code, ASCII/binary/hex, Lorem ipsum, regex tester, base converter (bin/oct/dec/hex), cron explainer, SQL formatter, JSON/YAML/XML validators, unit conversion, color (hex/rgb/hsl), slugify, case conversion, URL encode, HTML entities, JWT decode, Unix timestamps, JSON formatter, JSON↔YAML, JSON↔XML. |
 | [`@convertprivately/react`](./packages/react) | Drop-in React components with file input, preview, and download — one component per tool. Attribution badge on by default (link back to convertprivately.com); set `hideAttribution` to remove. |
 
 ## Examples

@@ -126,6 +126,42 @@
     "./units/color": {
       "types": "./dist/units/color.d.ts",
       "import": "./dist/units/color.js"
+    },
+    "./data/json-validate": {
+      "types": "./dist/data/jsonValidate.d.ts",
+      "import": "./dist/data/jsonValidate.js"
+    },
+    "./data/yaml-validate": {
+      "types": "./dist/data/yamlValidate.d.ts",
+      "import": "./dist/data/yamlValidate.js"
+    },
+    "./data/xml-validate": {
+      "types": "./dist/data/xmlValidate.d.ts",
+      "import": "./dist/data/xmlValidate.js"
+    },
+    "./data/json-diff": {
+      "types": "./dist/data/jsonDiff.d.ts",
+      "import": "./dist/data/jsonDiff.js"
+    },
+    "./data/sql-format": {
+      "types": "./dist/data/sqlFormat.d.ts",
+      "import": "./dist/data/sqlFormat.js"
+    },
+    "./text/regex": {
+      "types": "./dist/text/regex.d.ts",
+      "import": "./dist/text/regex.js"
+    },
+    "./text/base-convert": {
+      "types": "./dist/text/baseConvert.d.ts",
+      "import": "./dist/text/baseConvert.js"
+    },
+    "./text/passphrase": {
+      "types": "./dist/text/passphrase.d.ts",
+      "import": "./dist/text/passphrase.js"
+    },
+    "./text/cron": {
+      "types": "./dist/text/cron.d.ts",
+      "import": "./dist/text/cron.js"
     }
   },
   "files": [
@@ -168,7 +204,9 @@
     "papaparse": ">=5.4.0",
     "js-yaml": ">=4.1.0",
     "fast-xml-parser": ">=4.0.0",
-    "ulid": ">=3.0.0"
+    "ulid": ">=3.0.0",
+    "cronstrue": ">=2.0.0",
+    "sql-formatter": ">=15.0.0"
   },
   "peerDependenciesMeta": {
     "heic2any": { "optional": true },
@@ -180,15 +218,19 @@
     "papaparse": { "optional": true },
     "js-yaml": { "optional": true },
     "fast-xml-parser": { "optional": true },
-    "ulid": { "optional": true }
+    "ulid": { "optional": true },
+    "cronstrue": { "optional": true },
+    "sql-formatter": { "optional": true }
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
     "@types/papaparse": "^5.3.0",
     "@types/qrcode": "^1.5.0",
+    "cronstrue": "^2.0.0",
     "fast-xml-parser": "^4.0.0",
     "js-yaml": "^4.1.0",
     "pdfjs-dist": "^4.0.0",
+    "sql-formatter": "^15.0.0",
     "ulid": "^3.0.0",
     "typescript": "^5.4.0"
   }
